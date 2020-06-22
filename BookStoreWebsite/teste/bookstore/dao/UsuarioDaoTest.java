@@ -30,9 +30,9 @@ public class UsuarioDaoTest {
 	@Test
 	public void testCriarUsuario() {
 		Usuario usuario = new Usuario();
-		usuario.setEmail("teste1@teste1.com");
-		usuario.setNomeCompleto("Ezandro Bueno");
-		usuario.setSenha("hello1");		
+		usuario.setEmail("teste2@teste2.com");
+		usuario.setNomeCompleto("Nayara Balarotti");
+		usuario.setSenha("hello2");		
 
 		usuario = usuarioDao.criar(usuario);
 			
