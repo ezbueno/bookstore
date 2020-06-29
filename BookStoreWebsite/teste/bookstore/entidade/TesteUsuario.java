@@ -8,9 +8,9 @@ public class TesteUsuario {
 	public static void main(String[] args) {
 		
 		Usuario usuario = new Usuario();
-		usuario.setEmail("teste2@teste2.com");
-		usuario.setNomeCompleto("Nayara Balarotti");
-		usuario.setSenha("hello2");
+		usuario.setEmail("teste4@teste4.com");
+		usuario.setNomeCompleto("Camila Roma");
+		usuario.setSenha("hello4");
 		
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("BookStoreWebsite");
 													

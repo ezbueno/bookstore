@@ -22,14 +22,13 @@ public class UsuarioDao extends JpaDao<Usuario> implements GenericoDao<Usuario> 
 	}
 
 	@Override
-	public Usuario get(Object id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Usuario get(Object usuarioId) {
+		return super.encontrar(Usuario.class, usuarioId);
 	}
 
 	@Override
-	public void deletar(Object id) {
-		// TODO Auto-generated method stub
+	public void deletar(Object usuarioId) {
+		super.deletar(Usuario.class, usuarioId);
 		
 	}
 

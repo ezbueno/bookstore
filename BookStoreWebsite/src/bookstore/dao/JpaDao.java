@@ -25,6 +25,24 @@ public class JpaDao<E> {
 		entityManager.getTransaction().begin();
 		entidade = entityManager.merge(entidade);
 		entityManager.getTransaction().commit();
+		
 		return entidade;
+	}
+	
+	public E encontrar(Class<E> tipo, Object id) {
+		E entidade = entityManager.find(tipo, id);
+		
+		if (entidade != null) {
+			entityManager.refresh(entidade);
+		}
+		
+		return entidade;
+	}
+	
+	public void deletar(Class<E> tipo, Object id) {
+		entityManager.getTransaction().begin();
+		Object referencia = entityManager.getReference(tipo, id);
+		entityManager.remove(referencia);
+		entityManager.getTransaction().commit();
 	}
 }
